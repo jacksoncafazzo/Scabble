@@ -9,13 +9,11 @@ namespace ScrabbleNamespace
     [Fact]
     public void ScrabbleScore_inputWordKGetScore_true()
     {
-      Scrabble score = new Scrabble("k");
+      Scrabble score = new Scrabble("K");
       Assert.Equal(5, score.ScrabbleScore());
-
-      // Anagram newAnagram = new Anagram("a");
-      //  Console.WriteLine("Test output: " + newAnagram.GetInput());
-      // Assert.Equal("a", newAnagram.GetInput());
     }
+    // [Fact]
+    // public void
 
 
 
