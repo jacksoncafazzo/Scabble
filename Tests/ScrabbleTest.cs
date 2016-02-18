@@ -12,8 +12,12 @@ namespace ScrabbleNamespace
       Scrabble score = new Scrabble("K");
       Assert.Equal(5, score.ScrabbleScore());
     }
-    // [Fact]
-    // public void
+    [Fact]
+    public void ScrabbleScore_inputWordKittyGetScore_true()
+    {
+      Scrabble score = new Scrabble("KITTY");
+      Assert.Equal(12, score.ScrabbleScore());
+    }
 
 
 
