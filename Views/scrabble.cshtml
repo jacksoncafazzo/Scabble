@@ -2,5 +2,17 @@
 
 <form action="/results" method="post">
 Enter A Scrabble Word:
-<input type="text" name="input">
+<input type="text" name="input" autofocus>
 </form>
+
+<ol>
+  @if (Model != null)
+  {
+    @foreach (var item in @Model)
+    {
+      <li>You submitted @item.GetWord()</li>
+      <li>This is yer scrabble score: @item.GetScore()</li>
+    </br>
+    }
+  }
+</ol>

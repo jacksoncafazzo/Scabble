@@ -14,8 +14,8 @@ namespace ScrabbleNamespace
       Post["/results"] = _ =>
       {
         Scrabble score = new Scrabble(Request.Form["input"]);
-
-        return View["scrabble_results.cshtml", score];
+        List<Scrabble> allScores =  Scrabble.GetAll();
+        return View["scrabble.cshtml", allScores];
       };
 
     }
