@@ -1,8 +1,8 @@
 Logic Specs
-      Take string input for users scrabble word
-      identify score of the inputted word
-              Look at each individual letter of word and tally a score for appropriate letter
-      return score to user
+*      Take string input for users scrabble word
+*      identify score of the inputted word
+*              Look at each individual letter of word and tally a score for appropriate letter
+*      return score to user
 
 
 

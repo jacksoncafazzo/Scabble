@@ -7,6 +7,7 @@ namespace ScrabbleNamespace
   public class Scrabble
   {
     private string _word;
+    private int _score;
     private Dictionary<char, int> _letterPoints = new Dictionary<char, int>()
     {
       { 'A', 1 },
@@ -39,8 +40,15 @@ namespace ScrabbleNamespace
 
     public Scrabble(string input)
     {
-      _word = input;
+      _word = input.ToUpper();  //lets add some more functionality to this object to pass into model.
+      _score = this.ScrabbleScore();
     }
+
+    public int GetScore()
+    {
+      return _score;
+    }
+
 
     public int ScrabbleScore()
     {

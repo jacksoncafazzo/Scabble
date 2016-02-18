@@ -7,8 +7,17 @@ namespace ScrabbleNamespace
   {
     public HomeModule()
     {
-//       Get["/"] = _ =>
-//
+      Get["/"] = _ =>
+      {
+        return View["scrabble.cshtml"];
+      };
+      Post["/results"] = _ =>
+      {
+        Scrabble score = new Scrabble(Request.Form["input"]);
+
+        return View["scrabble_results.cshtml", score];
+      };
+
     }
   }
 }
