@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
 namespace ScrabbleNamespace
@@ -37,12 +38,14 @@ namespace ScrabbleNamespace
       { 'J', 8 },
       { 'X', 8 },
       { 'Q', 10},
-      { 'Z', 10}
+      { 'Z', 10},
+      { ' ', 0}
     };
 
     public Scrabble(string input)
     {
-      _word = input.ToUpper();  //lets add some more functionality to this object to pass into model.
+      _word = input.ToUpper();
+      _word = this.RemoveSpaces(); //lets add some more functionality to this object to pass into model.
       _score = this.ScrabbleScore();
       _instances.Add(this);
     }
@@ -60,6 +63,12 @@ namespace ScrabbleNamespace
     public static List<Scrabble> GetAll()
     {
       return _instances;
+    }
+
+    public string RemoveSpaces()
+    {
+      string pattern = @" ";
+      return Regex.Replace(_word, pattern, "");
     }
 
 
